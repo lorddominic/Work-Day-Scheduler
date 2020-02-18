@@ -24,9 +24,9 @@ $(document).ready(function () {
     function updateBackground() {
 
         //get the time using moment.js
-        // var currentTime = $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-
+        $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
         var currentHour = moment().hour();
+        console.log(currentHour);
 
         $(".time-block").each(function () {
             var hour = parseInt($(this).attr("id").split("-")[1]);
